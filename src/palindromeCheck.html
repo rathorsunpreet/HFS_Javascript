@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title> Palindrome Check </title>
+    <script>
+      String.prototype.palindrome = function() {
+        var rev = "";
+        for (var i = this.length - 1; i >= 0; i--) {
+          rev = rev + this[i];
+        }
+        if (this.valueOf() == rev) {
+          return true;
+        }
+        return false;
+      };
+      
+      var phrases = ["eve", "kayak", "mom", "wow", "Not a palindrome"];
+      for (var i = 0; i < phrases.length; i++) {
+        var phrase = phrases[i];
+        if (phrase.palindrome()) {
+          console.log("'" + phrase + "' is a palindrome");
+        } else {
+          console.log("'" + phrase + "' is NOT a palindrome");
+        }
+      }
+
+    </script>
+  </head>
+  <body>
+  </body>
+</html>

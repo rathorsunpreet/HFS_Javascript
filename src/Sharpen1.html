@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title> Sharpen Your Pencil 1 </title>
+    <script>
+      var cadi = {
+        make: "GM",
+        model: "Cadillac",
+        year: 1955,
+        color: "tan",
+        passengers: 5,
+        convertible: false,
+        mileage: 12892
+      };
+
+      function prequal(car) {
+        if (car.mileage > 10000) {
+          return false;
+        } else if (car.year > 1960) {
+          return false;
+        }
+        return true;
+      }
+
+      var worthALook = prequal(cadi);
+      if (worthALook) {
+        console.log("You gotta check out this " + cadi.make + " " +
+        cadi.model);
+      } else {
+      console.log("You should really pass on the " + cadi.make + " " +
+      cadi.model);
+      }
+    </script>
+  </head>
+  <body></body>
+</html>
